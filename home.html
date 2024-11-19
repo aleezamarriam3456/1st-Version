@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elegant Atelier - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="script.js" defer></script> <!-- Link to your JavaScript -->
+</head>
+<body>
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="call-info">
+                    <p class="phone-number">Call: <span>+123456789</span></p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Main Header -->
+            <div class="main-header">
+                <div class="header-left">
+                    <div class="menu-icon" onclick="toggleSidebar()">
+                        <i class="bx bx-menu"></i> <!-- Menu icon -->
+                    </div>
+                    <div class="search-icon">
+                        <i class="bx bx-search"></i> <!-- Search icon -->
+                    </div>
+                </div>
+
+                <div class="header-logo">
+                    <h1>The Elegant Atelier</h1> <!-- Website name -->
+                </div>
+
+                <div class="header-right">
+                    <div class="icon-container">
+                        <button class="sign-in-button">
+                            <i class="bx bx-user"></i> <!-- Sign In icon -->
+                        </button>
+                        <div class="cart-icon">
+                            <i class="bx bx-shopping-bag"></i> <!-- Cart icon -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Placeholder for Dynamic Content -->
+        <div id="content-placeholder">
+            <h2>Welcome to The Elegant Atelier</h2>
+            <p>Your one-stop shop for exquisite jewelry pieces.</p>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2> <!-- Centered heading -->
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span> <!-- Close button -->
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="#">All Jewelry</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sales</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay for Dimming Effect -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="social-link"><i class="bx bxl-instagram"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link" onclick="loadSection('reviews')">Customer Reviews</a>
+                <a href="#" class="footer-link" onclick="loadSection('about')">About Us</a>
+                <a href="#" class="footer-link" onclick="loadSection('shipping')">Shipping Policy</a>
+            </div>
+            <h3 class="store-name">The Elegant Atelier © 2024</h3>
+            <p>
+                <a href="#" class="footer-link" onclick="loadSection('contact')">Contact Us</a> | 
+                <a href="#" class="footer-link" onclick="loadSection('privacy')">Privacy Policy</a> | 
+                <a href="#" class="footer-link" onclick="loadSection('refund')">Return and Refund Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

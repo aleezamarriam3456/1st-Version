@@ -1,0 +1,352 @@
+/* --------Header Styles------- */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Change background color if needed */
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: center; /* Center all elements */
+    align-items: center; /* Align items vertically */
+    background-color: black; /* Black background for the top bar */
+    padding: 10px 0; /* Adjust padding */
+    color: white; /* White text */
+    font-size: 0.9em;
+}
+
+/* Centering the Call and Icons */
+.top-bar .call-info {
+    margin-right: 20px; /* Space between call info and social icons */
+    font-weight: 300; /* Light font weight */
+}
+
+.phone-number {
+    text-decoration: underline; /* Underline only the phone number */
+    text-decoration-color: rgba(255, 255, 255, 0.5); /* Light line color */
+    text-decoration-thickness: 1px; /* Thin underline */
+    margin: 0 10px; /* Space around the number */
+}
+
+.social-links {
+    display: flex; /* Display icons in a row */
+    gap: 20px; /* Space between social icons */
+}
+
+.social-links a {
+    color: white; /* White color for the social icons */
+    font-size: 1.4em; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+    color: #deb887; /* Light tan color on hover */
+}
+
+
+/*-------- Main Header --------*/
+
+.main-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out children */
+    align-items: center; /* Center vertically */
+    background-color: #ffffff; /* Background color */
+    padding: 4px 6px; /* Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Keep the header fixed at the top */
+    top: 0; /* Positioning */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Header Left */
+.header-left {
+    display: flex; /* Flex container */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Icons */
+.menu-icon, .search-icon {
+    font-size: 1.5em; /* Size of the icons */
+    margin-right: 15px; /* Space between icons */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #8b4513; /* Dark brown color */
+}
+
+/* Logo */
+.header-logo h1 {
+    font-size: 1.8em; /* Font size for the logo */
+    color: #8b4513; /* Dark brown color */
+    text-align: center; /* Center the text */
+    align-items: center;
+    flex-grow: 1; /* Allow logo to take available space */
+}
+
+/* Header Right */
+.header-right {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex; /* Display icons in a row */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Sign In Button */
+.sign-in-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.5em; /* Size of the icon */
+    color: #8b4513; /* Dark brown color */
+    margin-right: 15px; /* Space from cart icon */
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 1.5em; /* Size of the icon */
+    color: #8b4513; /* Dark brown color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover Effects for Icons */
+.menu-icon:hover,
+.search-icon:hover,
+.sign-in-button:hover,
+.cart-icon:hover {
+    color: #deb887; /* Light tan color on hover */
+    transition: color 0.3s; /* Smooth transition effect */
+}
+
+/*------- Sidebar Styles ---------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -50%; /* Start off-screen, half screen width */
+    width: 50%; /* Sidebar covers half the screen width */
+    height: 100vh; /* Full viewport height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 0; /* Remove any padding at the top */
+    background-color: white;
+}
+ 
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #000; /* Black background */
+    padding: 10px;
+    color: white;
+    margin: 0; /* Remove any margin that might add space */
+}
+
+.sidebar.active {
+    left: 0; /* Bring sidebar fully into view */
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.5em;
+    margin: 0;
+    color: white; /* White text color for visibility */
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px; /* Position close to the right edge */
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white; /* White color for close button */
+}
+
+/* Sidebar list */
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    padding: 10px 15px;
+}
+
+.sidebar-list li a {
+    text-decoration: none;
+    color: #8b4513;
+    display: block;
+}
+
+.sidebar-list li a:hover {
+    background-color: #deb887;
+}
+
+/* Overlay effect when sidebar is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Shifted content */
+.main-content.shifted {
+    transform: translateX(50%);
+    transition: transform 0.3s ease;
+    filter: brightness(0.8); /* Dim effect on main content */
+}
+
+/*-------Footer Section---------*/
+
+/* Footer styles */
+.footer {
+    background-color: white; /* Footer background color */
+    color: #333; /* Main text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Padding for spacing */
+    position: relative; /* Set positioning */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+}
+
+/* Footer content styles */
+.footer-content {
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center content */
+}
+
+/* Footer links styles */
+.footer-link, .social-link {
+    color: #8b4513; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.footer-link:hover, .social-link:hover {
+    color: #deb887; /* Change color on hover */
+}
+
+/* Social icon styles */
+.social-icons {
+    margin: 10px 0; /* Spacing between icons and text */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    font-size: 22px; /* Icon size */
+}
+
+/* Store name styles */
+.store-name {
+    color: #555; /* Darker shade for store name */
+    font-size: 1.5em; /* Larger font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Additional links styles */
+.footer-links {
+    margin-top: 10px; /* Spacing between icons and links */
+}
+
+.footer-links a {
+    color: #aaa; /* Light color for additional links */
+    margin: 0 10px; /* Space between links */
+}
+
+
+/* ---------- Footer Section Styles  ---------- */
+/* ---------- Common Section Styles ---------- */
+
+
+.section {
+    background-color: #ffffff; /* White background for sections */
+    padding: 40px 20px; /* Padding for spacing */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* ---------- Section Headings ---------- */
+.section h2 {
+    font-size: 1.8em; /* Font size for section headings */
+    color: #5a270d; /* Dark brown color for headings */
+    margin-bottom: 20px; /* Space below headings */
+    text-align: center; /* Center align headings */
+}
+
+/* ---------- About Section ---------- */
+.about {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+}
+
+.about img {
+    max-width: 45%; /* Image takes up 45% of the container */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* --------- Responsive Layout -------- */
+@media (max-width: 768px) {
+    /* Top bar styles for mobile */
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-bar .social-links {
+        margin-top: 10px;
+    }
+
+    /* Header styles for mobile */
+    .main-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-logo h1 {
+        font-size: 1.5em;
+    }
+
+    .icon-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Sidebar for mobile */
+    .sidebar {
+        width: 70%;
+    }
+
+    /* Footer for mobile */
+    .footer-content {
+        padding: 10px;
+    }
+
+    /* Adjust About section layout */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 80%; /* Image takes up more space */
+        margin-bottom: 20px;
+    }
+}
